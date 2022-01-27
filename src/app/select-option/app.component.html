@@ -1,0 +1,17 @@
+<form name="editForm" role="form" novalidate [formGroup]="editForm">
+  <p>
+    <select multiple name="issuerInfo" formControlName="issuerInfos" size="10" [compareWith]="comFun">
+      <option *ngFor="let issuerInfo of issuerInfos" [value]="issuerInfo">
+        {{ issuerInfo.issuerName }}
+      </option>
+    </select>
+  </p>
+
+  <p>
+    <select multiple name="authority" formControlName="authorities" size="10">
+      <option *ngFor="let authority of authorities" [value]="authority">
+        {{ authority }}
+      </option>
+    </select>
+  </p>
+</form>
